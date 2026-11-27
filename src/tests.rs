@@ -289,3 +289,17 @@ fn settings_inputs_keyboard_reset_and_reload() {
 fn deployed_settings_inputs_and_reload() {
     exercise_settings("https://solia.home.rethinkos.com/settings.solia");
 }
+
+#[test]
+#[ignore = "uses the configured HTTPS test domain"]
+fn deployed_star_map_renders_with_inference_unconfigured() {
+    let ctx = egui::Context::default();
+    let url = "https://solia.home.rethinkos.com/star-map.solia";
+    let mut browser = Browser::new(ctx.clone(), url.into()).unwrap();
+    settle(&mut browser);
+    assert!(browser.error.is_none(), "{:?}", browser.error);
+    let first = render(&mut browser, &ctx, vec![]);
+    assert!(label(&first, "Base (80, 90) / Star (240, 90)").is_some());
+    assert!(label(&first, "Suggest a star").is_some());
+    assert_eq!(first.shapes.iter().filter(|s|matches!(&s.shape,egui::Shape::Circle(c) if c.fill==egui::Color32::from_rgb(255,179,92))).count(),1);
+}

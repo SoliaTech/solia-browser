@@ -3046,12 +3046,14 @@ dependencies = [
 [[package]]
 name = "solia"
 version = "0.1.0"
-source = "git+https://github.com/SoliaTech/solia.git?rev=dfbc5aac6a6db95ce347bffe6a56fb2f93925f36#dfbc5aac6a6db95ce347bffe6a56fb2f93925f36"
+source = "git+https://github.com/SoliaTech/solia.git?rev=ebe7e645e166361ff9b27e0bc296faa71d44c2d6#ebe7e645e166361ff9b27e0bc296faa71d44c2d6"
 dependencies = [
  "eframe",
+ "reqwest",
  "serde",
  "serde_json",
  "tempfile",
+ "tokio",
  "wasmi",
  "wat",
 ]

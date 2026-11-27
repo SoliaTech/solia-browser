@@ -5,7 +5,7 @@ edition = "2024"
 license = "AGPL-3.0-only"
 
 [dependencies]
-solia = { git = "https://github.com/SoliaTech/solia.git", rev = "dfbc5aac6a6db95ce347bffe6a56fb2f93925f36" }
+solia = { git = "https://github.com/SoliaTech/solia.git", rev = "ebe7e645e166361ff9b27e0bc296faa71d44c2d6" }
 eframe = { version = "=0.36.2", default-features = false, features = ["default_fonts", "glow", "x11", "wayland", "accesskit"] }
 reqwest = { version = "0.12", default-features = false, features = ["native-tls"] }
 tokio = { version = "1", features = ["rt", "time", "sync", "macros"] }

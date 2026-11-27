@@ -109,6 +109,7 @@ pub async fn load(client: &Client, address: &str) -> Result<Loaded, String> {
         .map_err(|_| "Download timed out after 15 seconds")??;
     let src = std::str::from_utf8(&bytes).map_err(|e| format!("{origin}: invalid UTF-8: {e}"))?;
     let package = solia::compile_source(src).map_err(|e| format!("{origin}:{e}"))?;
-    let app = AppInstance::load(&package).map_err(|e| format!("{origin}: load failed: {e}"))?;
+    let mut app = AppInstance::load(&package).map_err(|e| format!("{origin}: load failed: {e}"))?;
+    app.set_source(origin.to_string());
     Ok(Loaded { origin, app })
 }

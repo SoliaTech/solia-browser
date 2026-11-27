@@ -14,7 +14,7 @@
 
 ## Run the network source MVP
 
-Cargo fetches the pinned Solia compiler from the SoliaTech repository. From this repository run:
+Cargo fetches the pinned Solia compiler and runtime from the SoliaTech repository. From this repository run:
 
 ```sh
 cargo run --locked -- https://solia.home.rethinkos.com/counter.solia
@@ -23,6 +23,8 @@ cargo run --locked -- https://solia.home.rethinkos.com/counter.solia
 The desktop client fetches the source, compiles it in memory, and renders Counter beneath the address bar. Click **Increment**, or use **Reload** to fetch the current source and reset the instance. Running without arguments opens the same test URL. The test domain must be reachable from your network.
 
 To try nested layouts, checkbox and slider bindings, open the [settings source](https://solia.home.rethinkos.com/settings.solia) in the desktop client. Use Tab to reach the controls, Space to toggle Mute, and the arrow keys to adjust Volume.
+
+Open the star map and move the base with the sliders. To request an observation point, select **Suggest a star**, review the displayed prompt and select **Allow once**. A valid reply updates the coordinates and the orange point together. [Star map source](https://solia.home.rethinkos.com/star-map.solia)
 
 For local development with the Solia examples checked out in `../solia`, serve them with `python3 -m http.server 8080 --bind 127.0.0.1 --directory ../solia/examples` and open `http://127.0.0.1:8080/counter.solia`. Run `cargo test --locked` for loopback integration tests and `cargo test --locked -- --ignored` for the live HTTPS Counter test.
 
