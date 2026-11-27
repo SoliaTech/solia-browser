@@ -3046,7 +3046,7 @@ dependencies = [
 [[package]]
 name = "solia"
 version = "0.1.0"
-source = "git+https://github.com/SoliaTech/solia.git?rev=246fd1deec8c73a3b13cb3920dd0503a99835db3#246fd1deec8c73a3b13cb3920dd0503a99835db3"
+source = "git+https://github.com/SoliaTech/solia.git?rev=dfbc5aac6a6db95ce347bffe6a56fb2f93925f36#dfbc5aac6a6db95ce347bffe6a56fb2f93925f36"
 dependencies = [
  "eframe",
  "serde",

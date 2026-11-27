@@ -14,7 +14,7 @@
 
 ## Run the network source MVP
 
-Cargo fetches the pinned Solia compiler from the private SoliaTech repository using your Git credentials. From this repository run:
+Cargo fetches the pinned Solia compiler from the SoliaTech repository. From this repository run:
 
 ```sh
 cargo run --locked -- https://solia.home.rethinkos.com/counter.solia
@@ -441,4 +441,4 @@ The client should consume the language and runtime through versioned interfaces.
 
 ## License
 
-License not selected yet. Choose a project-wide license before accepting external contributions or publishing stable packages.
+This project is licensed under the GNU Affero General Public License, version 3 only (AGPL-3.0-only). See [LICENSE](LICENSE).
