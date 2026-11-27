@@ -1,0 +1,11 @@
+[package]
+name = "solia-browser"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+solia = { git = "https://github.com/SoliaTech/solia.git", rev = "246fd1deec8c73a3b13cb3920dd0503a99835db3" }
+eframe = { version = "=0.36.2", default-features = false, features = ["default_fonts", "glow", "x11", "wayland", "accesskit"] }
+reqwest = { version = "0.12", default-features = false, features = ["native-tls"] }
+tokio = { version = "1", features = ["rt", "time", "sync", "macros"] }
+url = "2"

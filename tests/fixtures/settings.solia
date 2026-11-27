@@ -1,0 +1,26 @@
+app Settings {
+    state {
+        muted: bool = false
+        volume: i32 = 40
+    }
+
+    view {
+        Column(gap: 12) {
+            Heading("Audio settings")
+            Checkbox("Mute", checked: muted)
+            Row(gap: 8) {
+                Text("Volume")
+                Text("{volume}%")
+            }
+            Slider("Volume", value: volume, min: 0, max: 100)
+            Divider()
+            Row(gap: 8) {
+                Button("Reset") {
+                    muted = false
+                    volume = 40
+                }
+                Text("Muted: {muted}")
+            }
+        }
+    }
+}
